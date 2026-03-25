@@ -4,11 +4,11 @@ Python + CUDA FFT solver for the demagnetising field arising from a magnetisatio
 ## Implementation
 The demagnetising field is computed as a convolution in Fourier space of the geometric (pre-computed) demagnetising tensor $N_{xy}$ and the magnetisation:
 
-$\mathcal{F}(Hx) = \mathcal{F}(N_{xx}) * \mathcal{F}(M_x) + \mathcal{F}(N_{xy}) * \mathcal{F}(M_y) + \mathcal{F}(N_{xz}) * \mathcal{F}(M_z)$
+$\mathcal{F}(H_x) = \mathcal{F}(N_{xx}) * \mathcal{F}(M_x) + \mathcal{F}(N_{xy}) * \mathcal{F}(M_y) + \mathcal{F}(N_{xz}) * \mathcal{F}(M_z)$
 
-$\mathcal{F}(Hy) = \mathcal{F}(N_{xy}) * \mathcal{F}(M_x) + \mathcal{F}(N_{yy}) * \mathcal{F}(M_y) + \mathcal{F}(N_{yz}) * \mathcal{F}(M_z)$
+$\mathcal{F}(H_y) = \mathcal{F}(N_{xy}) * \mathcal{F}(M_x) + \mathcal{F}(N_{yy}) * \mathcal{F}(M_y) + \mathcal{F}(N_{yz}) * \mathcal{F}(M_z)$
 
-$\mathcal{F}(Hz) = \mathcal{F}(N_{xz}) * \mathcal{F}(M_x) + \mathcal{F}(N_{yz}) * \mathcal{F}(M_y) + \mathcal{F}(N_{zz}) * \mathcal{F}(M_z)$
+$\mathcal{F}(H_z) = \mathcal{F}(N_{xz}) * \mathcal{F}(M_x) + \mathcal{F}(N_{yz}) * \mathcal{F}(M_y) + \mathcal{F}(N_{zz}) * \mathcal{F}(M_z)$
 
 All computation on the GPU is performed in single precision.
 
