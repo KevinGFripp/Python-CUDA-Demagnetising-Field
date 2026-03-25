@@ -37,6 +37,9 @@ The flux-closure domain state minimises the in-plane demagnetising field at the 
 
 ## Required packacges:
 CUDA >= 11.0
+
 Python >= 3.10
+
 cuPy
+
 NumPy
